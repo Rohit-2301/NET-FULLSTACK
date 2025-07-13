@@ -8,7 +8,7 @@ class Program
         datatype.show();
         Operator.show();
         conditionalStmt.show();
-        loops.show();
+        // loops.show();
 
     }
 }
