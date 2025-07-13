@@ -1,0 +1,14 @@
+A:\dot_Net_fullstack\helloCsharp\bin\Debug\net9.0\helloCsharp.exe
+A:\dot_Net_fullstack\helloCsharp\bin\Debug\net9.0\helloCsharp.deps.json
+A:\dot_Net_fullstack\helloCsharp\bin\Debug\net9.0\helloCsharp.runtimeconfig.json
+A:\dot_Net_fullstack\helloCsharp\bin\Debug\net9.0\helloCsharp.dll
+A:\dot_Net_fullstack\helloCsharp\bin\Debug\net9.0\helloCsharp.pdb
+A:\dot_Net_fullstack\helloCsharp\obj\Debug\net9.0\helloCsharp.GeneratedMSBuildEditorConfig.editorconfig
+A:\dot_Net_fullstack\helloCsharp\obj\Debug\net9.0\helloCsharp.AssemblyInfoInputs.cache
+A:\dot_Net_fullstack\helloCsharp\obj\Debug\net9.0\helloCsharp.AssemblyInfo.cs
+A:\dot_Net_fullstack\helloCsharp\obj\Debug\net9.0\helloCsharp.csproj.CoreCompileInputs.cache
+A:\dot_Net_fullstack\helloCsharp\obj\Debug\net9.0\helloCsharp.dll
+A:\dot_Net_fullstack\helloCsharp\obj\Debug\net9.0\refint\helloCsharp.dll
+A:\dot_Net_fullstack\helloCsharp\obj\Debug\net9.0\helloCsharp.pdb
+A:\dot_Net_fullstack\helloCsharp\obj\Debug\net9.0\helloCsharp.genruntimeconfig.cache
+A:\dot_Net_fullstack\helloCsharp\obj\Debug\net9.0\ref\helloCsharp.dll
