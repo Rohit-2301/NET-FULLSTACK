@@ -1,64 +1,86 @@
 ﻿using System;
+
+// Aliases for external namespaces
 using A = CompanyA;
 using B = CompanyB;
 using U = University;
+using E = ExceptionDemo;
+
 class Program
 {
     static void Main(string[] args)
     {
-        //USER INPUT
+        // ===================================
+        // 🔹 USER INPUT
+        // ===================================
+        Console.ForegroundColor = ConsoleColor.Blue;
+
         Console.Write("Enter your name: ");
         string name = Console.ReadLine();
 
-        // Integer input
         Console.Write("Enter your age: ");
         int age = Convert.ToInt32(Console.ReadLine());
 
-        // Double input
         Console.Write("Enter your GPA: ");
         double gpa = Convert.ToDouble(Console.ReadLine());
 
         Console.WriteLine($"\nName: {name}\nAge: {age}\nGPA: {gpa}");
 
-        //Printing ascii characters , for lower case run the loop from a-z
+        // ===================================
+        // 🔹 ASCII VALUES
+        // ===================================
+        Console.WriteLine("\nUppercase Alphabets and their ASCII values:");
         for (char c = 'A'; c <= 'Z'; c++)
         {
-            Console.WriteLine($"character:{c}, ASCII: {(int)c}");
+            Console.WriteLine($"Character: {c}, ASCII: {(int)c}");
         }
 
-        //to see the character corresponding to the ascii value
+        // Convert ASCII to character
         int ascii = 65;
         char character = (char)ascii;
-        Console.WriteLine(character);  // Output: A
+        Console.WriteLine($"\nASCII {ascii} corresponds to character: {character}");
 
-
+        // ===================================
+        // 🔹 BASIC C# CONCEPTS
+        // ===================================
+        Console.WriteLine("\nBasic Data Type, Operators, Conditionals and Loops Output:");
         datatype.show();
         Operator.show();
         conditionalStmt.show();
         loops.show();
 
-        //NAMESPACES
-
-        // CompanyA.User userA = new CompanyA.User();
-        // userA.display();  // Output: Company A - User
-
-        // CompanyB.User userB = new CompanyB.User();
-        // userB.display();  // Output: Company B - User
-
-        //or we can use "using" keyword at the top of the code to use the namespaces
-
-        A.User userA = new A.User(); // called using the alias name 
+        // ===================================
+        // 🔹 NAMESPACES & ALIASING
+        // ===================================
+        Console.WriteLine("\nNamespace Usage with Aliases:");
+        A.User userA = new A.User(); // CompanyA
         userA.display();
-        B.User userB = new B.User();
+
+        B.User userB = new B.User(); // CompanyB
         userB.display();
 
-        //OOPS
-        U.Person personA = new U.Person("rohit", 20);
+        // ===================================
+        // 🔹 OOP Concepts: Class, Inheritance, Interface
+        // ===================================
+        Console.WriteLine("\nOOP Concepts:");
+        U.Person personA = new U.Person("Rohit", 20);
         personA.display();
 
-        U.Stu student1 = new U.Stu("rohit", 20, 88);
+        U.Stu student1 = new U.Stu("Rohit", 20, 88);
         student1.display();
         student1.graduate();
 
+        // ===================================
+        // 🔹 EXCEPTION HANDLING
+        // ===================================
+        Console.WriteLine("\nRunning basic division exception demo:\n");
+        E.ExceptionHandling.Excephan();
+
+        Console.WriteLine("\n=============================\n");
+
+        Console.WriteLine("Running complete exception handling demo:\n");
+        E.ExceptionHandling.CompleteExceptionDemo();
+
+        Console.ResetColor(); // Reset console color to default
     }
 }
