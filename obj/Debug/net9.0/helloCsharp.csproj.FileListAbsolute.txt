@@ -12,3 +12,4 @@ A:\dot_Net_fullstack\helloCsharp\obj\Debug\net9.0\refint\helloCsharp.dll
 A:\dot_Net_fullstack\helloCsharp\obj\Debug\net9.0\helloCsharp.pdb
 A:\dot_Net_fullstack\helloCsharp\obj\Debug\net9.0\helloCsharp.genruntimeconfig.cache
 A:\dot_Net_fullstack\helloCsharp\obj\Debug\net9.0\ref\helloCsharp.dll
+A:\dot_Net_fullstack\helloCsharp\obj\Debug\net9.0\helloCsharp.sourcelink.json
