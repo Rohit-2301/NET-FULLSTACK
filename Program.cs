@@ -6,12 +6,26 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("hello world \n");
+        //USER INPUT
+        Console.Write("Enter your name: ");
+        string name = Console.ReadLine();
+
+        // Integer input
+        Console.Write("Enter your age: ");
+        int age = Convert.ToInt32(Console.ReadLine());
+
+        // Double input
+        Console.Write("Enter your GPA: ");
+        double gpa = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine($"\nName: {name}\nAge: {age}\nGPA: {gpa}");
 
         datatype.show();
         Operator.show();
         conditionalStmt.show();
         loops.show();
+
+        //NAMESPACES
 
         // CompanyA.User userA = new CompanyA.User();
         // userA.display();  // Output: Company A - User
@@ -26,12 +40,13 @@ class Program
         B.User userB = new B.User();
         userB.display();
 
+        //OOPS
         U.Person personA = new U.Person("rohit", 20);
         personA.display();
 
         U.Stu student1 = new U.Stu("rohit", 20, 88);
         student1.display();
         student1.graduate();
-        
+
     }
 }
