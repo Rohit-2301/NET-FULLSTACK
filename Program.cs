@@ -20,6 +20,18 @@ class Program
 
         Console.WriteLine($"\nName: {name}\nAge: {age}\nGPA: {gpa}");
 
+        //Printing ascii characters , for lower case run the loop from a-z
+        for (char c = 'A'; c <= 'Z'; c++)
+        {
+            Console.WriteLine($"character:{c}, ASCII: {(int)c}");
+        }
+
+        //to see the character corresponding to the ascii value
+        int ascii = 65;
+        char character = (char)ascii;
+        Console.WriteLine(character);  // Output: A
+
+
         datatype.show();
         Operator.show();
         conditionalStmt.show();
