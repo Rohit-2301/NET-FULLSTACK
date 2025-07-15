@@ -1,5 +1,4 @@
 ---
-```markdown
 # .NET Full Stack Developer - Phase 1 Projects (C# Console Applications)
 
 ---
