@@ -1,3 +1,4 @@
+---
 ```markdown
 # .NET Full Stack Developer - Phase 1 Projects (C# Console Applications)
 
@@ -24,18 +25,18 @@ This repository includes all foundational **C# console application concepts** co
 
 /dot\_Net\_fullstack/
 │
-├── Program.cs                   // Main program entry with switch-based menu
-├── datatype.cs                 // Demonstrates C# primitive data types
-├── Operator.cs                 // Arithmetic, relational, logical operators
-├── conditionalStmt.cs          // if-else, switch-case decision making
-├── loops.cs                    // for, while, do-while, and nested loops
-├── ExceptionHandling.cs        // Basic & advanced exception handling (try/catch/finally)
-├── CompanyA/User.cs            // User class under CompanyA namespace
-├── CompanyB/User.cs            // User class under CompanyB namespace
-├── University/Person.cs        // OOP base class representing a person
-├── University/Stu.cs           // Inherits Person, implements graduation logic
-├── Collection/Collections.cs   // Interactive demo of C# collection types
-└── README.md                   // Project documentation
+├── Program.cs                 // Main program entry with switch-based menu
+├── datatype.cs               // Demonstrates C# primitive data types
+├── Operator.cs               // Arithmetic, relational, logical operators
+├── conditionalStmt.cs        // if-else, switch-case decision making
+├── loops.cs                  // for, while, do-while, and nested loops
+├── ExceptionHandling.cs      // Basic & advanced exception handling (try/catch/finally)
+├── CompanyA/User.cs          // User class under CompanyA namespace
+├── CompanyB/User.cs          // User class under CompanyB namespace
+├── University/Person.cs      // OOP base class representing a person
+├── University/Stu.cs         // Inherits Person, implements graduation logic
+├── Collection/Collections.cs // Interactive demo of C# collection types
+└── README.md                 // Project documentation
 
 ````
 
@@ -43,19 +44,19 @@ This repository includes all foundational **C# console application concepts** co
 
 ## 📦 Module Descriptions
 
-| Module               | Description                                                                 |
-|----------------------|-----------------------------------------------------------------------------|
-| **Program.cs**        | Entry point of the application with a switch-case menu to explore modules. |
-| **datatype.cs**       | Covers value types like int, float, char, string, and type conversion.     |
-| **Operator.cs**       | Demonstrates various operators (arithmetic, comparison, logical).          |
-| **conditionalStmt.cs**| Uses `if-else` and `switch` to control program flow based on conditions.   |
-| **loops.cs**          | Implements `for`, `while`, `do-while`, and nested loops with examples.     |
-| **ExceptionHandling.cs** | Shows how to handle runtime errors using `try`, `catch`, and `finally`. |
-| **CompanyA/User.cs**  | Simulates a user class under `CompanyA` namespace for namespace demo.      |
-| **CompanyB/User.cs**  | Another user class under a different namespace (`CompanyB`).               |
-| **University/Person.cs** | Base class with properties like name and age, used in OOP examples.     |
-| **University/Stu.cs** | Inherits `Person` and adds GPA & graduation method (implements interface). |
-| **Collection/Collections.cs** | Interactive menu to explore major C# collection types (see below).  |
+| Module                   | Description                                                                 |
+|--------------------------|-----------------------------------------------------------------------------|
+| **Program.cs**           | Entry point of the application with a switch-case menu to explore modules. |
+| **datatype.cs**          | Covers value types like int, float, char, string, and type conversion.     |
+| **Operator.cs**          | Demonstrates arithmetic, relational, and logical operations.               |
+| **conditionalStmt.cs**   | Implements `if`, `if-else`, and `switch` statements.                       |
+| **loops.cs**             | Shows looping with `for`, `while`, `do-while`, and nested examples.        |
+| **ExceptionHandling.cs** | Demonstrates exception handling using `try`, `catch`, and `finally`.       |
+| **CompanyA/User.cs**     | Contains a simple class inside the `CompanyA` namespace.                   |
+| **CompanyB/User.cs**     | Similar class in a different namespace (`CompanyB`).                       |
+| **University/Person.cs** | Base class with properties and display method for OOP demo.                |
+| **University/Stu.cs**    | Derived class inheriting from `Person` and implementing an interface.      |
+| **Collections.cs**       | Switch-based interactive collection demos like `List<T>`, `Queue<T>`, etc. |
 
 ---
 
@@ -71,7 +72,8 @@ This repository includes all foundational **C# console application concepts** co
 | 6   | `HashSet<T>`              | Unique unordered elements                       |
 | 7   | `Switch Menu`             | User-interactive menu to explore each type      |
 
-💡 You can call the menu using:
+💡 Call the menu in your main file using:
+
 ```csharp
 Collection.Collections.choice();
 ````
@@ -99,12 +101,11 @@ By the end of this phase, you’ll confidently understand and apply:
 
 * Input/Output operations
 * Data types and operators
-* Flow control using conditionals and loops
-* Object-Oriented Programming (Inheritance, Interfaces)
-* Namespaces and code modularity
+* Control flow using conditionals and loops
+* Object-Oriented Programming (inheritance, interfaces)
+* Namespaces and modular programming
 * Exception handling
-* Working with common C# collections
-* Structuring C# console projects in real-world format
+* Working with C# collections
+* Organizing multi-file console applications
 
 ---
-
