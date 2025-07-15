@@ -1,140 +1,112 @@
 ---
-### Overview
 
-This project repository contains all the essential **C# console application concepts** covered in **Phase 1** of the .NET Full Stack Developer training program. It includes beginner to intermediate-level C# features such as input/output, data types, control structures, object-oriented programming, namespaces, and exception handling.
-
----
-
-### Technologies Used
-
-* **.NET SDK** (.NET 6 or higher recommended)
-* **C#**
-* **Visual Studio Code** or any C#-supported IDE
+```markdown
+# .NET Full Stack Developer - Phase 1 Projects (C# Console Applications)
 
 ---
 
-## Folder Structure
+### 🧾 Overview
+
+This repository includes all foundational **C# console application concepts** covered in **Phase 1** of the .NET Full Stack Developer training program. It focuses on **beginner to intermediate-level** C# features and prepares learners for backend development using .NET.
+
+---
+
+### 🛠️ Technologies Used
+
+- **.NET SDK** (.NET 6 or higher)
+- **C#**
+- **Visual Studio Code**, **Visual Studio**, or any C#-supported IDE
+- **Command Line / Terminal**
+
+---
+
+## 📁 Folder Structure
 
 ```
-/dot_Net_fullstack/
+
+/dot\_Net\_fullstack/
 │
-├── Program.cs                  // Main program entry
-├── datatype.cs                // Data type and type-checking
-├── Operator.cs                // Operators with examples
-├── conditionalStmt.cs         // if-else, switch-case
-├── loops.cs                   // for, while, do-while
-├── ExceptionHandling.cs       // Basic and advanced exception handling
-├── CompanyA/User.cs           // Namespace: CompanyA
-├── CompanyB/User.cs           // Namespace: CompanyB
-├── University/Person.cs       // Base OOP class
-├── University/Stu.cs          // Derived OOP class with interface
-└── README.md                  // Documentation
-```
+├── Program.cs                   // Main program entry with switch-based menu
+├── datatype.cs                 // Demonstrates C# primitive data types
+├── Operator.cs                 // Arithmetic, relational, logical operators
+├── conditionalStmt.cs          // if-else, switch-case decision making
+├── loops.cs                    // for, while, do-while, and nested loops
+├── ExceptionHandling.cs        // Basic & advanced exception handling (try/catch/finally)
+├── CompanyA/User.cs            // User class under CompanyA namespace
+├── CompanyB/User.cs            // User class under CompanyB namespace
+├── University/Person.cs        // OOP base class representing a person
+├── University/Stu.cs           // Inherits Person, implements graduation logic
+├── Collection/Collections.cs   // Interactive demo of C# collection types
+└── README.md                   // Project documentation
+
+````
 
 ---
 
-## How to Run Locally
+## 📦 Module Descriptions
 
-1. **Install .NET SDK** ([https://dotnet.microsoft.com/en-us/download](https://dotnet.microsoft.com/en-us/download))
-2. Open terminal and navigate to the project folder
+| Module               | Description                                                                 |
+|----------------------|-----------------------------------------------------------------------------|
+| **Program.cs**        | Entry point of the application with a switch-case menu to explore modules. |
+| **datatype.cs**       | Covers value types like int, float, char, string, and type conversion.     |
+| **Operator.cs**       | Demonstrates various operators (arithmetic, comparison, logical).          |
+| **conditionalStmt.cs**| Uses `if-else` and `switch` to control program flow based on conditions.   |
+| **loops.cs**          | Implements `for`, `while`, `do-while`, and nested loops with examples.     |
+| **ExceptionHandling.cs** | Shows how to handle runtime errors using `try`, `catch`, and `finally`. |
+| **CompanyA/User.cs**  | Simulates a user class under `CompanyA` namespace for namespace demo.      |
+| **CompanyB/User.cs**  | Another user class under a different namespace (`CompanyB`).               |
+| **University/Person.cs** | Base class with properties like name and age, used in OOP examples.     |
+| **University/Stu.cs** | Inherits `Person` and adds GPA & graduation method (implements interface). |
+| **Collection/Collections.cs** | Interactive menu to explore major C# collection types (see below).  |
+
+---
+
+## 📚 Collections Module Details
+
+| Sr. | Collection Type           | Description                                     |
+| --- | ------------------------- | ----------------------------------------------- |
+| 1   | `ArrayList`               | Non-generic dynamic list (mixed types allowed)  |
+| 2   | `List<T>`                 | Type-safe, dynamic list                         |
+| 3   | `Dictionary<TKey,TValue>` | Key-value store, fast lookup by key             |
+| 4   | `Stack<T>`                | LIFO data structure                             |
+| 5   | `Queue<T>`                | FIFO data structure                             |
+| 6   | `HashSet<T>`              | Unique unordered elements                       |
+| 7   | `Switch Menu`             | User-interactive menu to explore each type      |
+
+💡 You can call the menu using:
+```csharp
+Collection.Collections.choice();
+````
+
+---
+
+## ▶️ How to Run Locally
+
+### ✅ Prerequisites
+
+* [.NET SDK](https://dotnet.microsoft.com/en-us/download) (Version 6.0 or later)
+
+### 🧪 Steps
 
 ```bash
-dotnet new console -n HelloCSharp
-cd HelloCSharp
-```
-
-3. Replace the auto-generated `Program.cs` with your updated `Program.cs`.
-
-4. Add your additional class files (`datatype.cs`, `Operator.cs`, etc.) to the same directory.
-
-5. Run the project
-
-```bash
+cd path/to/dot_Net_fullstack/
 dotnet run
 ```
 
 ---
 
-## Concepts Covered
+## 🎯 Learning Outcome
 
-### 1. Console Input & Output
+By the end of this phase, you’ll confidently understand and apply:
 
-* `Console.ReadLine()` for input
-* `Convert.ToInt32()`, `Convert.ToDouble()`
-* `TryParse()` for safe conversions
-
-### 2. Data Types and Type Checking
-
-* Basic types: `int`, `float`, `double`, `string`, `bool`, `char`
-* `typeof()` and `GetType()` methods
-
-### 3. Operators
-
-* Arithmetic, relational, logical, assignment, bitwise operators
-* Examples in a dedicated file
-
-### 4. Conditional Statements
-
-* `if`, `else if`, `else`
-* `switch-case`
-
-### 5. Loops
-
-* `for`, `while`, `do-while`, and `foreach`
-
-### 6. ASCII Values
-
-* Print character to ASCII using `(int)`
-* Convert ASCII to char using `(char)`
-
-### 7. Namespaces and Aliasing
-
-* Creating and using custom namespaces
-* Resolving naming conflicts using `using Alias = Namespace`
-
-### 8. Object-Oriented Programming
-
-* Classes and Objects
-* Constructors
-* Inheritance (`Student : Person`)
-* Polymorphism (`virtual`, `override`)
-* Interfaces and Implementation
-
-### 9. Exception Handling
-
-* `try`, `catch`, `finally`
-* Specific exceptions: `DivideByZeroException`, `FormatException`, `NullReferenceException`
-* Creating and throwing custom exceptions
-* Using multiple `catch` blocks
+* Input/Output operations
+* Data types and operators
+* Flow control using conditionals and loops
+* Object-Oriented Programming (Inheritance, Interfaces)
+* Namespaces and code modularity
+* Exception handling
+* Working with common C# collections
+* Structuring C# console projects in real-world format
 
 ---
-
-## Sample Output
-
-```
-Enter your name: Rohit
-Enter your age: 21
-Enter your GPA: 8.5
-
-Name: Rohit
-Age: 21
-GPA: 8.5
-
-Character: A, ASCII: 65
-...
-Character: Z, ASCII: 90
-
-ASCII 65 corresponds to character: A
-```
-
----
-
-## Upcoming (Phase 2 Topics)
-
-* C# Collections (List, Dictionary, Stack, Queue)
-* File I/O in C#
-* LINQ
-* Entity Framework (EF Core)
-* ADO.NET
-* Web API with ASP.NET Core
 
