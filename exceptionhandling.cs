@@ -87,3 +87,20 @@ namespace ExceptionDemo
         }
     }
 }
+/*
+
+types of exception:
+_________________________________________________________________
+| Exception Type             | When it Occurs                   |
+| -------------------------- | -------------------------------- |
+| `DivideByZeroException`    | Dividing a number by zero        |
+| `NullReferenceException`   | Accessing a null object          |
+| `IndexOutOfRangeException` | Accessing an invalid array index |
+| `FormatException`          | Converting invalid data types    |
+| `InvalidCastException`     | Invalid type casting             |
+| `OverflowException`        | Arithmetic overflow              |
+| `IOException`              | File/stream issues               |
+| `FileNotFoundException`    | File not found                   |
+| `ArgumentException`        | Invalid method arguments         |
+-----------------------------------------------------------------
+*/

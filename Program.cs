@@ -5,6 +5,8 @@ using A = CompanyA;
 using B = CompanyB;
 using U = University;
 using E = ExceptionDemo;
+using C = Collection;
+using Collection;
 
 class Program
 {
@@ -59,6 +61,18 @@ class Program
         B.User userB = new B.User(); // CompanyB
         userB.display();
 
+        /* ==================================================================
+        🔹 CALL BY REFERENCE (actual reference is passed to the method) &
+        CALL BY VALUE(copy of value is passed to the method)
+        | Concept           | Keyword | Changes original ? | Requires init before passing |
+        | ----------------- | ------- | ------------------ | ---------------------------  |
+        | Call by Value     | —       | ❌ No              | ✅ Yes                      |
+        | Call by Reference | `ref`   | ✅ Yes             | ✅ Yes                      |
+        | Call by Reference | `out`   | ✅ Yes             | ❌ No                       |
+
+        ==================================================================*/
+
+
         // ===================================
         // 🔹 OOP Concepts: Class, Inheritance, Interface
         // ===================================
@@ -80,6 +94,13 @@ class Program
 
         Console.WriteLine("Running complete exception handling demo:\n");
         E.ExceptionHandling.CompleteExceptionDemo();
+        // ===================================
+        // 🔹 COLLECTIONS
+        // ===================================
+        // C.Collections m1 = new C.Collections();
+        C.Collections.Collectiondemo();
+
+
 
         Console.ResetColor(); // Reset console color to default
     }
