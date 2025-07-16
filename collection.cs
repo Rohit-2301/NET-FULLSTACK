@@ -6,7 +6,6 @@ namespace Collection
 {
     public class Collections
     {
-
         public static void choice()
         {
             bool exit = false;
@@ -25,39 +24,32 @@ namespace Collection
                 Console.Write("Choose an option (1-7): ");
                 Console.ResetColor();
 
-                string choice = Console.ReadLine();
+                string mainChoice = Console.ReadLine();
 
-                switch (choice)
+                switch (mainChoice)
                 {
                     case "1":
-                        ArrayListDemo();
+                        RunDemo(ArrayListDemo);
                         break;
-
                     case "2":
-                        ListDemo();
+                        RunDemo(ListDemo);
                         break;
-
                     case "3":
-                        DictionaryDemo();
+                        RunDemo(DictionaryDemo);
                         break;
-
                     case "4":
-                        HashSetDemo();
+                        RunDemo(HashSetDemo);
                         break;
-
                     case "5":
-                        QueueDemo();
+                        RunDemo(QueueDemo);
                         break;
-
                     case "6":
-                        StackDemo();
+                        RunDemo(StackDemo);
                         break;
-
                     case "7":
                         exit = true;
                         Console.WriteLine("Exiting Collections Menu...");
                         break;
-
                     default:
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Invalid option. Please choose between 1 and 7.");
@@ -67,111 +59,219 @@ namespace Collection
             }
         }
 
-        // All methods remain private since they're only used internally.
-        static void ArrayListDemo()
+        // Method to prompt user for default/user input and run demo
+        static void RunDemo(Action<bool> demoMethod)
+        {
+            Console.Write("Use default values? (y/n): ");
+            string input = Console.ReadLine().ToLower();
+            bool useDefault = input == "y" || input == "yes";
+            demoMethod(useDefault);
+        }
+
+        static void ArrayListDemo(bool useDefault)
         {
             ArrayList arr = new ArrayList();
-            arr.Add(1);
-            arr.Add("hello");
-            arr.Add(3.14);
+
+            if (useDefault)
+            {
+                arr.Add(1);
+                arr.Add("hello");
+                arr.Add(3.14);
+            }
+            else
+            {
+                Console.Write("Enter number of elements for ArrayList: ");
+                int count = int.Parse(Console.ReadLine());
+                for (int i = 0; i < count; i++)
+                {
+                    Console.Write("Enter value (stored as object): ");
+                    arr.Add(Console.ReadLine());
+                }
+            }
 
             Console.WriteLine("\nArrayList Elements:");
             foreach (var item in arr)
                 Console.WriteLine(item);
 
-            arr.Remove("hello");
-            Console.WriteLine("After removing 'hello':");
-            foreach (var item in arr)
-                Console.WriteLine(item);
+            if (arr.Contains("hello"))
+            {
+                arr.Remove("hello");
+                Console.WriteLine("After removing 'hello':");
+                foreach (var item in arr)
+                    Console.WriteLine(item);
+            }
         }
 
-        static void ListDemo()
+        static void ListDemo(bool useDefault)
         {
-            List<string> fruits = new List<string> { "Apple", "Banana", "Cherry" };
+            List<string> fruits = new List<string>();
+
+            if (useDefault)
+            {
+                fruits.AddRange(new[] { "Apple", "Banana", "Cherry" });
+            }
+            else
+            {
+                Console.Write("Enter number of fruits: ");
+                int count = int.Parse(Console.ReadLine());
+                for (int i = 0; i < count; i++)
+                {
+                    Console.Write($"Enter fruit {i + 1}: ");
+                    fruits.Add(Console.ReadLine());
+                }
+            }
 
             Console.WriteLine("\nList<T> Elements:");
             foreach (string fruit in fruits)
                 Console.WriteLine(fruit);
 
-            fruits.Add("Mango");
-            fruits.Remove("Banana");
+            Console.Write("Add a fruit: ");
+            fruits.Add(Console.ReadLine());
+            Console.Write("Remove a fruit: ");
+            fruits.Remove(Console.ReadLine());
+
             Console.WriteLine("After Add & Remove:");
             foreach (string fruit in fruits)
                 Console.WriteLine(fruit);
 
-            Console.WriteLine($"Contains 'Apple'? {fruits.Contains("Apple")}");
+            Console.Write("Check if a fruit exists: ");
+            string search = Console.ReadLine();
+            Console.WriteLine($"Contains '{search}'? {fruits.Contains(search)}");
             Console.WriteLine($"Total items: {fruits.Count}");
         }
 
-        static void DictionaryDemo()
+        static void DictionaryDemo(bool useDefault)
         {
-            Dictionary<int, string> students = new Dictionary<int, string>
+            Dictionary<int, string> students = new Dictionary<int, string>();
+
+            if (useDefault)
             {
-                {101, "Alice"},
-                {102, "Bob"},
-                {103, "Charlie"}
-            };
+                students[101] = "Alice";
+                students[102] = "Bob";
+                students[103] = "Charlie";
+            }
+            else
+            {
+                Console.Write("Enter number of students: ");
+                int count = int.Parse(Console.ReadLine());
+                for (int i = 0; i < count; i++)
+                {
+                    Console.Write("Enter ID: ");
+                    int id = int.Parse(Console.ReadLine());
+                    Console.Write("Enter Name: ");
+                    string name = Console.ReadLine();
+                    students[id] = name;
+                }
+            }
 
             Console.WriteLine("\nDictionary Elements:");
             foreach (var kvp in students)
                 Console.WriteLine($"Key: {kvp.Key}, Value: {kvp.Value}");
 
-            students.Remove(102);
-            Console.WriteLine("After removing key 102:");
+            Console.Write("Enter key to remove: ");
+            int removeKey = int.Parse(Console.ReadLine());
+            students.Remove(removeKey);
+
+            Console.WriteLine("After removal:");
             foreach (var kvp in students)
                 Console.WriteLine($"Key: {kvp.Key}, Value: {kvp.Value}");
 
-            if (students.ContainsKey(101))
-                Console.WriteLine("Key 101 exists.");
+            Console.Write("Enter key to check: ");
+            int checkKey = int.Parse(Console.ReadLine());
+            Console.WriteLine($"Key {checkKey} exists? {students.ContainsKey(checkKey)}");
         }
 
-        static void HashSetDemo()
+        static void HashSetDemo(bool useDefault)
         {
-            HashSet<int> numbers = new HashSet<int> { 1, 2, 3 };
+            HashSet<int> numbers = new HashSet<int>();
 
-            numbers.Add(2); // Duplicate won't be added
-            numbers.Add(4);
+            if (useDefault)
+            {
+                numbers.UnionWith(new[] { 1, 2, 3, 2, 4 });
+            }
+            else
+            {
+                Console.Write("Enter number of elements: ");
+                int count = int.Parse(Console.ReadLine());
+                for (int i = 0; i < count; i++)
+                {
+                    Console.Write("Enter number: ");
+                    numbers.Add(int.Parse(Console.ReadLine()));
+                }
+            }
 
             Console.WriteLine("\nHashSet Elements:");
             foreach (int num in numbers)
                 Console.WriteLine(num);
 
-            numbers.Remove(3);
-            Console.WriteLine("After removing 3:");
+            Console.Write("Enter number to remove: ");
+            numbers.Remove(int.Parse(Console.ReadLine()));
+
+            Console.WriteLine("After removal:");
             foreach (int num in numbers)
                 Console.WriteLine(num);
         }
 
-        static void QueueDemo()
+        static void QueueDemo(bool useDefault)
         {
             Queue<string> queue = new Queue<string>();
-            queue.Enqueue("First");
-            queue.Enqueue("Second");
-            queue.Enqueue("Third");
+
+            if (useDefault)
+            {
+                queue.Enqueue("First");
+                queue.Enqueue("Second");
+                queue.Enqueue("Third");
+            }
+            else
+            {
+                Console.Write("Enter number of queue items: ");
+                int count = int.Parse(Console.ReadLine());
+                for (int i = 0; i < count; i++)
+                {
+                    Console.Write("Enter item: ");
+                    queue.Enqueue(Console.ReadLine());
+                }
+            }
 
             Console.WriteLine("\nQueue Elements:");
             foreach (string item in queue)
                 Console.WriteLine(item);
 
-            Console.WriteLine($"Dequeued: {queue.Dequeue()}");
+            if (queue.Count > 0)
+                Console.WriteLine($"Dequeued: {queue.Dequeue()}");
 
             Console.WriteLine("Queue after Dequeue:");
             foreach (string item in queue)
                 Console.WriteLine(item);
         }
 
-        static void StackDemo()
+        static void StackDemo(bool useDefault)
         {
             Stack<string> stack = new Stack<string>();
-            stack.Push("Bottom");
-            stack.Push("Middle");
-            stack.Push("Top");
+
+            if (useDefault)
+            {
+                stack.Push("Bottom");
+                stack.Push("Middle");
+                stack.Push("Top");
+            }
+            else
+            {
+                Console.Write("Enter number of stack items: ");
+                int count = int.Parse(Console.ReadLine());
+                for (int i = 0; i < count; i++)
+                {
+                    Console.Write("Enter item: ");
+                    stack.Push(Console.ReadLine());
+                }
+            }
 
             Console.WriteLine("\nStack Elements:");
             foreach (string item in stack)
                 Console.WriteLine(item);
 
-            Console.WriteLine($"Popped: {stack.Pop()}");
+            if (stack.Count > 0)
+                Console.WriteLine($"Popped: {stack.Pop()}");
 
             Console.WriteLine("Stack after Pop:");
             foreach (string item in stack)
