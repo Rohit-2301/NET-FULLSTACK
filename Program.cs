@@ -25,8 +25,9 @@ class Program
             Console.WriteLine("5. OOP Concepts");
             Console.WriteLine("6. Exception Handling");
             Console.WriteLine("7. Collections");
-            Console.WriteLine("8. Exit");
-            Console.Write("Choose an option (1-8): ");
+            Console.WriteLine("8. Inheritance");
+            Console.WriteLine("9. Exit");
+            Console.Write("Choose an option (1-9): ");
             Console.ResetColor();
 
             string choice = Console.ReadLine();
@@ -102,9 +103,32 @@ class Program
                     break;
 
                 case "8":
+                    Console.WriteLine("\nInheritance Concepts Demo:\n");
+
+                    // Hierarchical Inheritance
+                    U.Stu student = new U.Stu("Rohit", 21, 85);
+                    student.display();
+                    student.graduate();
+
+                    Console.WriteLine();
+
+                    // Single + Interface (ITeach + Igraduate)
+                    U.Teacher teacher = new U.Teacher("Anjali", 35, "Mathematics");
+                    teacher.display();
+                    teacher.teach();
+                    teacher.graduate();
+
+                    Console.WriteLine();
+
+                    // Multilevel Inheritance
+                    U.Admin admin = new U.Admin("Raj", 42, "IT", "Network Admin");
+                    admin.display();
+                    break;
+                case "9":
                     Console.WriteLine("\nExiting program. Goodbye!");
                     exit = true;
                     break;
+
 
                 default:
                     Console.ForegroundColor = ConsoleColor.Red;
